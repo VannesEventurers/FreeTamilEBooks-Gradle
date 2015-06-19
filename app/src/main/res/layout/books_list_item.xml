@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/btnDown"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/download"
+            android:textColor="@color/white_color" />
+
+        <TextView
+            android:id="@+id/btnOpen"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnDown"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/open"
+            android:textColor="@color/white_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/baseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_layout_bg"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/thumbnail"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:id="@+id/ivBookImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3dp"
+                    android:scaleType="centerInside" />
+
+                <ProgressBar
+                    android:id="@+id/ivProgress"
+                    style="?android:attr/progressBarStyleSmallTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <!-- Title Of Book -->
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:textColor="@color/text_dark_color"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <!-- Author Name -->
+
+            <TextView
+                android:id="@+id/txtAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTitle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_dark_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

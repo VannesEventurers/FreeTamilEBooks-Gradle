@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_color">#FFFFFF</color>
+    <color name="black_color">#000000</color>
+    <color name="blue_color">#4D87F7</color>
+    <color name="blue_dark_color">#3863B6</color>
+    <color name="blue_light_color">#96B8FA</color>
+    <color name="blue_sky_color">#05A9D9</color>
+    <color name="text_dark_color">#333333</color>
+    <color name="text_light_color">#999999</color>
+    <color name="error_message_pink_color">#F7B1B1</color>
+    <color name="divider_color">#D9D9D9</color>
+    <color name="hint_color">#B2B2B2</color>
+    <color name="edit_text_bg_color">#F5F6F7</color>
+    <color name="left_menu_bg_color">#F0F0F0</color>
+    <color name="home_left_menu_pressed">#CECECE</color>
+
+    <color name="dashboard_set_color">#FF9900</color>
+    <color name="dashboard_set_color_2">#FF8100</color>
+
+    <color name="swipe_color1">#FF5F00</color>
+    <color name="swipe_color2">#FF7800</color>
+    <color name="swipe_color3">#FF8B00</color>
+    <color name="swipe_color4">#FF9900</color>
+
+</resources>
