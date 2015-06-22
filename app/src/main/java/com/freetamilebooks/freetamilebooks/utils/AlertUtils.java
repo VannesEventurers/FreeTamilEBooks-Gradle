@@ -30,8 +30,8 @@ public class AlertUtils {
                                           DialogInterface.OnClickListener onClick, boolean cancelable) {
         new AlertDialog.Builder(context).setMessage(message)
                 .setTitle(TextUtils.isNullOrEmpty(title) ? context.getString(R.string.app_name) : title)
-                .setCancelable(cancelable).setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, onClick).create().show();
+                .setCancelable(cancelable).setNegativeButton(R.string.no, null)
+                .setPositiveButton(R.string.yes, onClick).create().show();
     }
 
     public static void showAlertWithYesNo(Context context, String message, DialogInterface.OnClickListener onClick) {

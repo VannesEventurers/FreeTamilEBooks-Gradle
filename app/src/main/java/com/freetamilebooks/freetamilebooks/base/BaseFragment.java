@@ -75,4 +75,8 @@ public class BaseFragment extends Fragment {
     public void onFragmentClosed() {
 
     }
+
+    public BaseFragment getActiveFragment() {
+        return (BaseFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.content_frame);
+    }
 }

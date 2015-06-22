@@ -15,12 +15,12 @@
     <color name="left_menu_bg_color">#F0F0F0</color>
     <color name="home_left_menu_pressed">#CECECE</color>
 
-    <color name="dashboard_set_color">#FF9900</color>
-    <color name="dashboard_set_color_2">#FF8100</color>
+    <color name="dashboard_set_color">#005088</color>
+    <color name="dashboard_set_color_2">#005F88</color>
 
-    <color name="swipe_color1">#FF5F00</color>
-    <color name="swipe_color2">#FF7800</color>
-    <color name="swipe_color3">#FF8B00</color>
-    <color name="swipe_color4">#FF9900</color>
+    <color name="swipe_color1">#005088</color>
+    <color name="swipe_color2">#000988</color>
+    <color name="swipe_color3">#006488</color>
+    <color name="swipe_color4">#000988</color>
 
 </resources>

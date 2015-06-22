@@ -50,6 +50,6 @@
         android:id="@+id/title_divider"
         android:layout_width="match_parent"
         android:layout_height="@dimen/divider_height"
-        android:background="@color/divider_color" />
+        android:background="@color/dashboard_set_color" />
 
 </LinearLayout>
