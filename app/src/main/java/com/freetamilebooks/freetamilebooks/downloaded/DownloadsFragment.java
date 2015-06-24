@@ -34,7 +34,7 @@ public class DownloadsFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setPageTitle(getString(R.string.downloads));
-        setLeftDrawable(R.drawable.left_menu);
+        setLeftDrawable(R.drawable.left_menu_white);
     }
 
     @Override

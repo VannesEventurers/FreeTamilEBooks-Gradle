@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white_color"
+    android:background="@color/dashboard_set_color"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -30,8 +30,9 @@
             android:layout_toEndOf="@+id/back"
             android:maxLines="2"
             android:gravity="center"
-            android:textColor="@color/text_dark_color"
+            android:textColor="@color/white_color"
             android:textSize="@dimen/action_bar_title_text_size"
+            android:textStyle="bold"
             android:layout_toLeftOf="@+id/done"
             android:layout_toStartOf="@+id/done" />
 

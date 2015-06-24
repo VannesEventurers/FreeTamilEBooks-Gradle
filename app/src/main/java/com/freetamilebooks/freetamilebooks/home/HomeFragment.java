@@ -62,7 +62,7 @@ public class HomeFragment extends BaseFragment implements HomeItemListener, Swip
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        setLeftDrawable(R.drawable.left_menu);
+        setLeftDrawable(R.drawable.left_menu_white);
         setPageTitle(R.string.home);
     }
 

@@ -23,7 +23,7 @@ public class CommentsFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setPageTitle(getString(R.string.comments));
-        setLeftDrawable(R.drawable.left_menu);
+        setLeftDrawable(R.drawable.left_menu_white);
     }
 
     @Override

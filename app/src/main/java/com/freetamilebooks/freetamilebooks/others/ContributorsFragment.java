@@ -20,7 +20,7 @@ public class ContributorsFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setPageTitle(getString(R.string.our_team));
-        setLeftDrawable(R.drawable.left_menu);
+        setLeftDrawable(R.drawable.left_menu_white);
     }
 
     @Override
@@ -40,11 +40,6 @@ public class ContributorsFragment extends BaseFragment {
 
     @SuppressLint("SetJavaScriptEnabled")
     private void setupDefaults() {
-        /*final ProgressDialog mProgressDialog = new ProgressDialog(getActivity());
-        mProgressDialog.setMessage(getString(R.string.loading_));
-        mProgressDialog.setCancelable(false);
-        mProgressDialog.show();*/
-
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDefaultTextEncodingName("utf-8");
@@ -57,15 +52,9 @@ public class ContributorsFragment extends BaseFragment {
             }
 
             public void onPageFinished(WebView view, String url) {
-                /*if (mProgressDialog != null && getActiveFragment() instanceof HelpUsFragment) {
-                    mProgressDialog.dismiss();
-                }*/
             }
 
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-                /*if(mProgressDialog != null && getActiveFragment() instanceof HelpUsFragment) {
-                    mProgressDialog.dismiss();
-                }*/
                 AlertUtils.showAlert(getActivity(), description);
             }
         });
