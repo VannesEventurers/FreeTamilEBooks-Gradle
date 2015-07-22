@@ -8,13 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp">
 
         <TextView
-            android:id="@+id/btnDown"
+            android:id="@+id/btn_down"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:background="@drawable/button_selector"
             android:gravity="center"
             android:paddingBottom="10dp"
@@ -25,11 +27,12 @@
             android:textColor="@color/white_color" />
 
         <TextView
-            android:id="@+id/btnOpen"
+            android:id="@+id/btn_open"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/btnDown"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btn_down"
             android:layout_marginTop="5dp"
             android:background="@drawable/button_selector"
             android:gravity="center"
@@ -42,7 +45,7 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/baseLayout"
+        android:id="@+id/base_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/white_layout_bg"
@@ -58,10 +61,11 @@
                 android:id="@+id/thumbnail"
                 android:layout_width="80dp"
                 android:layout_height="100dp"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
 
                 <ImageView
-                    android:id="@+id/ivBookImage"
+                    android:id="@+id/iv_book_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/app_name"
@@ -69,7 +73,7 @@
                     android:scaleType="centerInside" />
 
                 <ProgressBar
-                    android:id="@+id/ivProgress"
+                    android:id="@+id/iv_progress"
                     style="?android:attr/progressBarStyleSmallTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -80,13 +84,14 @@
             <!-- Title Of Book -->
 
             <TextView
-                android:id="@+id/txtTitle"
+                android:id="@+id/txt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/thumbnail"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:singleLine="false"
@@ -97,14 +102,15 @@
             <!-- Author Name -->
 
             <TextView
-                android:id="@+id/txtAuthor"
+                android:id="@+id/txt_author"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtTitle"
+                android:layout_below="@id/txt_title"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/thumbnail"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:textColor="@color/text_dark_color"

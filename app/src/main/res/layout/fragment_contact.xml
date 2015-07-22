@@ -13,14 +13,15 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title_bar">
+        android:layout_below="@+id/title_bar"
+        android:padding="15dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/nameField"
+                android:id="@+id/name_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -28,7 +29,7 @@
                 android:weightSum="2">
 
                 <EditText
-                    android:id="@+id/edtFName"
+                    android:id="@+id/edt_fname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -39,7 +40,9 @@
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:padding="8dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textColorHint="@color/dashboard_set_color" />
 
                 <View
                     android:layout_width="5dp"
@@ -47,7 +50,7 @@
                     android:background="@drawable/white_layout_bg" />
 
                 <EditText
-                    android:id="@+id/edtLName"
+                    android:id="@+id/edt_lname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -58,27 +61,31 @@
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:padding="8dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:textColor="@color/black_color"
+                    android:textColorHint="@color/dashboard_set_color" />
             </LinearLayout>
 
             <EditText
-                android:id="@+id/edtMail"
+                android:id="@+id/edt_mail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/nameField"
+                android:layout_below="@+id/name_field"
                 android:background="@drawable/edittext_border"
                 android:ems="10"
                 android:gravity="center"
                 android:hint="@string/your_email"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:textColor="@color/black_color"
+                android:textColorHint="@color/dashboard_set_color" />
 
             <EditText
-                android:id="@+id/edtMessage"
+                android:id="@+id/edt_message"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                android:layout_below="@+id/edtMail"
+                android:layout_below="@+id/edt_mail"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edittext_border"
                 android:ems="10"
@@ -86,20 +93,22 @@
                 android:hint="@string/your_message"
                 android:imeOptions="actionDone"
                 android:inputType="textMultiLine"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:textColor="@color/black_color"
+                android:textColorHint="@color/dashboard_set_color" />
 
             <LinearLayout
-                android:id="@+id/submitField"
+                android:id="@+id/submit_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edtMessage"
+                android:layout_below="@+id/edt_message"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:gravity="right"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnSubmit"
+                    android:id="@+id/btn_submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_selector"

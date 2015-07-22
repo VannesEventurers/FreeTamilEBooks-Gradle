@@ -11,6 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:layout_below="@+id/title_bar">
 
         <TextView
@@ -42,7 +43,7 @@
                 android:layout_height="match_parent" />
 
             <ListView
-                android:id="@+id/downloadList"
+                android:id="@+id/download_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white_color"

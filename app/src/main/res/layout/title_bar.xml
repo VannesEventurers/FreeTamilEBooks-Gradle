@@ -6,45 +6,71 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_width="match_parent"
         android:id="@+id/title_layout"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/action_bar_size">
 
         <ImageView
             android:id="@+id/back"
-            android:src="@drawable/left_menu"
             android:layout_width="44dp"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:contentDescription="@string/app_name"
             android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
             android:onClick="onLeftActionClick"
-            android:scaleType="center" />
+            android:scaleType="center"
+            android:src="@drawable/left_menu_white" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/back"
             android:layout_toEndOf="@+id/back"
-            android:maxLines="2"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toStartOf="@+id/iv_search"
             android:gravity="center"
+            android:maxLines="2"
             android:textColor="@color/white_color"
             android:textSize="@dimen/action_bar_title_text_size"
             android:textStyle="bold"
-            android:layout_toLeftOf="@+id/done"
-            android:layout_toStartOf="@+id/done" />
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/back"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toStartOf="@+id/iv_search"
+            android:background="@drawable/edittext_bottom_border"
+            android:singleLine="true"
+            android:textSize="@dimen/text_medium"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="@color/white_color"
+            android:hint="@string/search"
+            android:inputType="text"
+            android:visibility="gone"
+            android:imeOptions="actionSearch"
+            android:textStyle="italic" />
 
         <ImageView
-            android:id="@+id/done"
+            android:id="@+id/iv_search"
             android:layout_width="44dp"
             android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:onClick="onRightActionClick"
             android:scaleType="center"
-            android:visibility="invisible" />
+            android:src="@drawable/search_icon"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <View

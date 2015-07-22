@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FreeTamilEbooks</string>
+    <string name="app_name">Free Tamil Ebooks</string>
 
     <string name="switch_on">On</string>
     <string name="switch_off">Off</string>
@@ -37,5 +37,9 @@
     <string name="wrong_format">தவறான கோப்பு வடிவம்!!!</string>
 
 
+    <string name="search">தேடு</string>
     <string name="file_saved">File saved in your SD card&#8230;</string>
+
+    <string name="author">ஆசிரியர்</string>
+    <string name="title">தலைப்பு</string>
 </resources>
