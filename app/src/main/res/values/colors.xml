@@ -15,18 +15,18 @@
     <color name="left_menu_bg_color">#F0F0F0</color>
     <color name="home_left_menu_pressed">#CECECE</color>
 
-    <color name="dashboard_set_color">#0097A7</color>
-    <color name="dashboard_set_color_2">#00BCD4</color>
+    <color name="dashboard_set_color">#2196F3</color>
+    <color name="dashboard_set_color_2">#1976D2</color>
 
-    <color name="swipe_color1">#0097A7</color>
+    <color name="swipe_color1">#1976D2</color>
     <color name="swipe_color2">#0D33A6</color>
     <color name="swipe_color3">#FF5B00</color>
     <color name="swipe_color4">#DDFF00</color>
 
-    <color name="primary">#00BCD4</color>
-    <color name="primary_dark">#0097A7</color>
-    <color name="primary_light">#B2EBF2</color>
-    <color name="accent">#00BCD4</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#000000</color>
+    <color name="accent">#03A9F4</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>

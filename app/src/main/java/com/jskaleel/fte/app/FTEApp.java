@@ -3,6 +3,7 @@ package com.jskaleel.fte.app;
 import android.app.Application;
 import android.os.Build;
 
+import com.facebook.FacebookSdk;
 import com.jskaleel.fte.base.ActivityFinishCallback;
 import com.jskaleel.fte.preferences.UserPreference;
 import com.jskaleel.fte.webservice.FTEHttpClient;
@@ -26,6 +27,8 @@ public class FTEApp extends Application {
 		httpClient = new FTEHttpClient(this);
 		mUserPreference = new UserPreference(this);
 		mActivities = new ArrayList<>();
+
+		FacebookSdk.sdkInitialize(this.getApplicationContext());
 	}
 
 	public FTEHttpClient getHttpClient() {

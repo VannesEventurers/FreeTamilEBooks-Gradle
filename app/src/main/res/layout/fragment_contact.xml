@@ -61,6 +61,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:padding="8dp"
+                    android:editable="false"
                     android:singleLine="true"
                     android:textColor="@color/black_color"
                     android:textColorHint="@color/dashboard_set_color" />

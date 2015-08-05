@@ -11,18 +11,18 @@
         android:src="@drawable/ic_launcher"
         android:scaleType="center"
         android:contentDescription="@string/app_name"
-        android:background="@color/dashboard_set_color" />
+        android:background="@color/dashboard_set_color_2" />
 
     <com.jskaleel.fte.views.AnimatedExpandableListView
         android:id="@+id/listMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/title_divider"
-        android:background="@android:color/transparent"
+        android:background="@color/white_color"
         android:cacheColorHint="@android:color/transparent"
         android:childIndicator="@null"
         android:clipToPadding="false"
-        android:divider="@android:color/transparent"
+        android:divider="@color/dashboard_set_color"
         android:dividerHeight="0dp"
         android:groupIndicator="@null"
         android:listSelector="@android:color/transparent"

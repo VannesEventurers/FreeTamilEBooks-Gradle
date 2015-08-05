@@ -95,7 +95,7 @@ public class LeftMenuAdapter extends AnimatedExpandableListView.AnimatedExpandab
         txtName.setTypeface(TypefaceUtils.getTypeFace(mActivity, TypefaceUtils.LIGHT));
         section.setVisibility(View.VISIBLE);
 
-        txtName.setPadding(DeviceUtils.getPixelFromDp(mActivity, 22), DeviceUtils.getPixelFromDp(mActivity, 12), DeviceUtils.getPixelFromDp(mActivity, 20), DeviceUtils.getPixelFromDp(mActivity, 12));
+        txtName.setPadding(DeviceUtils.getPixelFromDp(mActivity, 22), DeviceUtils.getPixelFromDp(mActivity, 15), DeviceUtils.getPixelFromDp(mActivity, 20), DeviceUtils.getPixelFromDp(mActivity, 15));
         txtName.setTypeface(isExpanded ? TypefaceUtils.getTypeFace(mActivity, TypefaceUtils.MEDIUM) : TypefaceUtils.getTypeFace(mActivity, TypefaceUtils.LIGHT));
 
         return convertView;

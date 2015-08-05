@@ -23,6 +23,8 @@ public class BaseFragment extends Fragment {
                 onLeftActionClick(v);
             }else if(v.getId() == R.id.iv_search) {
                 onRightActionClick(v);
+            }else if(v.getId() == R.id.iv_facebook) {
+                onFacebookIconClick(v);
             }
         }
     };
@@ -71,6 +73,16 @@ public class BaseFragment extends Fragment {
         }
     }
 
+    public void setFacebookDrawable(int facebookIcon) {
+        ImageView facebook = (ImageView) getView().findViewById(R.id.iv_facebook);
+        facebook.setVisibility(View.VISIBLE);
+        facebook.setOnClickListener(onClick);
+        if (facebook != null) {
+            facebook.setImageResource(facebookIcon);
+            ColorFilterUtils.setColorFilter(facebook);
+        }
+    }
+
     public void setPageTitle(int title) {
         setPageTitle(getString(title));
     }
@@ -81,6 +93,10 @@ public class BaseFragment extends Fragment {
     }
 
     public void onRightActionClick(View v) {
+
+    }
+
+    public void onFacebookIconClick(View v) {
 
     }
 

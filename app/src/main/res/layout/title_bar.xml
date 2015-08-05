@@ -60,6 +60,18 @@
             android:textStyle="italic" />
 
         <ImageView
+            android:id="@+id/iv_facebook"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_toStartOf="@+id/iv_search"
+            android:onClick="onFacebookIconClick"
+            android:scaleType="center"
+            android:src="@drawable/ic_facebook"
+            android:visibility="gone" />
+
+        <ImageView
             android:id="@+id/iv_search"
             android:layout_width="44dp"
             android:layout_height="match_parent"

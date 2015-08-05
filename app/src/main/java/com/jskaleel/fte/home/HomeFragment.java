@@ -22,6 +22,8 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ListView;
 
+import com.facebook.share.model.AppInviteContent;
+import com.facebook.share.widget.AppInviteDialog;
 import com.google.gson.Gson;
 import com.jskaleel.fte.R;
 import com.jskaleel.fte.app.ConnectionDetector;
@@ -30,10 +32,10 @@ import com.jskaleel.fte.leftmenu.HomeActivity;
 import com.jskaleel.fte.preferences.UserPreference;
 import com.jskaleel.fte.search.BookSearchActivity;
 import com.jskaleel.fte.utils.AlertUtils;
-import com.jskaleel.fte.utils.FTELog;
 import com.jskaleel.fte.utils.TextUtils;
 import com.jskaleel.fte.webservice.FTEHttpClient;
 import com.jskaleel.fte.webservice.FTERequestHandler;
+import com.jskaleel.fte.webservice.WebServices;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -52,7 +54,6 @@ public class HomeFragment extends BaseFragment implements HomeItemListener, Swip
     private ListView listView;
     private BooksHomeParser booksHomeListParser;
     private BooksHomeAdapter booksHomeAdapter;
-    private static final String xmlUrl = "https://raw.githubusercontent.com/kishorek/Free-Tamil-Ebooks/master/booksdb.xml";
     private Boolean isInternetAvailable = false;
     private ConnectionDetector connectionDetector;
     private String savedfilePath;
@@ -67,10 +68,26 @@ public class HomeFragment extends BaseFragment implements HomeItemListener, Swip
     }
 
     @Override
+    public void onFacebookIconClick(View v) {
+        super.onFacebookIconClick(v);
+        String appLinkUrl, previewImageUrl;
+
+        appLinkUrl = WebServices.FB_INVITE_URL;
+        previewImageUrl = WebServices.FB_IMAGE_URL;
+
+        AppInviteContent content = new AppInviteContent.Builder()
+                .setApplinkUrl(appLinkUrl)
+                .setPreviewImageUrl(previewImageUrl)
+                .build();
+        AppInviteDialog.show(getActivity(), content);
+    }
+
+    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         setLeftDrawable(R.drawable.left_menu_white);
         setRightDrawable(R.drawable.search_icon);
+        setFacebookDrawable(R.drawable.ic_facebook);
         setPageTitle(R.string.home);
     }
 
@@ -167,11 +184,11 @@ public class HomeFragment extends BaseFragment implements HomeItemListener, Swip
             mProgressDialog.show();
         }
 
-        getHttpClient().performRequest(xmlUrl, FTEHttpClient.HttpMethod.GET, null, new FTERequestHandler() {
+        getHttpClient().performRequest(WebServices.XML_URL, FTEHttpClient.HttpMethod.GET, null, new FTERequestHandler() {
             @Override
             public void onSuccess(String content) {
                 if (getActivity() != null) {
-                    FTELog.print(content);
+//                    FTELog.print(content);
                     JSONObject jsonObj = null;
                     try {
                         jsonObj = XML.toJSONObject(content);

@@ -3,8 +3,8 @@
 
     <stroke
         android:width="2dp"
-        android:color="@color/blue_color" />
+        android:color="@color/swipe_color1" />
 
-    <solid android:color="@color/blue_color" />
+    <solid android:color="@color/swipe_color1" />
 
 </shape>

@@ -1,10 +1,12 @@
 package com.jskaleel.fte.leftmenu;
 
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentTransaction;
 
+import com.facebook.appevents.AppEventsLogger;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jskaleel.fte.R;
 import com.jskaleel.fte.base.BaseFragment;
@@ -16,6 +18,9 @@ import com.jskaleel.fte.others.ContributorsFragment;
 import com.jskaleel.fte.others.HelpUsFragment;
 import com.jskaleel.fte.utils.AlertUtils;
 import com.jskaleel.fte.utils.DeviceUtils;
+import com.jskaleel.fte.utils.FTELog;
+
+import bolts.AppLinks;
 
 public class HomeActivity extends SlidingMenuActivity implements OnMenuSelectedListener {
 
@@ -50,6 +55,14 @@ public class HomeActivity extends SlidingMenuActivity implements OnMenuSelectedL
     protected void onResume() {
         super.onResume();
         this.isExitPressed = false;
+        AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Logs 'app deactivate' App Event.
+        AppEventsLogger.deactivateApp(this);
     }
 
     @Override
@@ -99,6 +112,12 @@ public class HomeActivity extends SlidingMenuActivity implements OnMenuSelectedL
 
         getSlidingMenu().setOnClosedListener(onClosedListener);
         getSlidingMenu().setOnOpenListener(onOpenListener);
+
+        Uri targetUrl = AppLinks.getTargetUrlFromInboundIntent(this, getIntent());
+        if (targetUrl != null) {
+            String refCode = targetUrl.getQueryParameter("referral");
+            FTELog.print("Referral Code: " + refCode);
+        }
     }
 
     public void selectMenu(int menu, boolean checkCurrentFragment, boolean isToggle, boolean refreshOnCreate, Bundle args) {
